@@ -333,6 +333,7 @@ button {
   display: block;
   border: 1px solid var(--color-cornflower);
   border-radius: 4px;
+  padding: 12px 24px;
 }
 .portfolio-filters-btn:hover,
 .portfolio-filters-btn:focus {
@@ -372,3 +373,8 @@ button {
   border: 1px solid #e7e9fc;
   border-top: none;
 }
+
+.team-text {
+  text-align: center;
+}
+
