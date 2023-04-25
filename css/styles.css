@@ -90,9 +90,11 @@ button {
 .header-container {
   display: flex;
   align-items: center;
+ 
+}
+.header {
   border-bottom: 1px solid var(--color-cornflower);
 }
-
 .header-nav {
   margin-right: auto;
   display: flex;
@@ -125,7 +127,7 @@ button {
   letter-spacing: 0.02em;
   color: var(--color-navy-blue);
   display: block;
-  padding: 20px 0;
+  padding: 24px 0;
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
@@ -163,12 +165,11 @@ button {
 */
 .hero {
   background-color: var(--color-navy-blue);
+  padding: 188px 0;
 }
 
-.hero-container {
-  padding-top: 188px;
-  padding-bottom: 188px;
-}
+
+
 .hero-title {
   text-align: center;
   font-weight: 700;
@@ -176,7 +177,7 @@ button {
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: var(--color-white);
-  width: 496px;
+  max-width: 496px;
   margin: 0 auto 48px;
 }
 .hero-btn {
@@ -193,7 +194,8 @@ button {
   padding: 16px 32px;
   margin: 0 auto;
   min-width: 169px;
-  min-height: 56;
+  min-height: 56px;
+  border: none;
 }
 
 .hero-btn:hover,
@@ -205,8 +207,8 @@ button {
   | Features styles
   |============================
 */
-.features-container {
-  padding: 120px;
+.functional {
+  padding: 120px 0;
 }
 
 .features-list {
@@ -222,8 +224,8 @@ button {
   | Functional styles
   |============================
 */
-.functional-container {
-  padding-bottom: 120px;
+.functional {
+  padding: 120px 0;
 }
 
 .functional-list {
@@ -245,6 +247,7 @@ button {
 
 .team {
   background-color: var(--color-cloud);
+  padding: 120px 0;
 }
 
 .team-item {
@@ -252,9 +255,9 @@ button {
   padding-bottom: 32px;
   border-radius: 0px 0px 4px 4px;
   display: block;
+  width: calc((100% - 72px) / 4)
 }
 .team-container {
-  padding: 120px 0;
   align-items: center;
 }
 
@@ -268,6 +271,13 @@ button {
   max-width: 100%;
   height: auto;
 }
+.team-item-container {
+  padding: 32px 16px
+}
+.team-title {
+  text-align: center;
+  margin-bottom: 8px;
+}
 
 /**
   |============================
@@ -275,11 +285,10 @@ button {
   |============================
 */
 
-.footer-container {
-  padding: 100px 0;
-}
+
 .footer {
   background-color: var(--color-navy-blue);
+  padding: 100px 0;
 }
 .footer-link {
   font-family: "Raleway", sans-serif;
@@ -289,6 +298,8 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-iris);
+  display: inline-block;
+  margin-bottom: 16px;
 }
 .logo-cloud {
   color: var(--color-cloud);
@@ -300,7 +311,6 @@ button {
   letter-spacing: 0.02em;
   color: var(--color-cloud);
   width: 264px;
-  margin-top: 16px;
 }
 
 /**
@@ -308,8 +318,8 @@ button {
   | Portfolio styles
   |============================
 */
-.portfolio-container {
-  padding-bottom: 120px;
+.portfolio {
+  padding: 96px 0 120px;
 }
 .portfolio-filters-btn {
   font-family: inherit;
@@ -328,6 +338,8 @@ button {
 .portfolio-filters-btn:focus {
   background-color: var(--color-ocean);
   color: var(--color-white);
+  padding: 12px 24px;
+  border: 1px solid transparent;
 }
 
 .portfolio-filters-list {
@@ -338,17 +350,25 @@ button {
   gap: 24px;
   margin-left: auto;
   margin-right: auto;
+  justify-content: center;
+  margin-bottom: 72px
 }
 
 .portfolio-projects-list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--indent);
+  row-gap: 48px; 
+
 }
 
 .portfolio-projects-item {
   flex-basis: calc ((100% - var(--indent) * (var(--items-1))) / var(--items));
   border: 1px solid var(--color-cornflower);
   width: 360px;
-  padding-bottom: 48px;
+}
+.portfolio-prosect-container {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
