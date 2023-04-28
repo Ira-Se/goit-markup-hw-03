@@ -56,6 +56,20 @@ body {
   outline: 2px solid red;
   outline-offset: -2px;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* reset start */
 
 h1,
@@ -219,13 +233,14 @@ button {
   width: 264px;
 }
 
+
 /**
   |============================
   | Functional styles
   |============================
 */
 .functional {
-  padding: 120px 0;
+  padding-bottom: 120px;
 }
 
 .functional-list {
@@ -234,7 +249,6 @@ button {
 }
 
 .functional-img {
-  margin-bottom: 32px;
   display: block;
   max-width: 100%;
   height: auto;
@@ -252,7 +266,6 @@ button {
 
 .team-item {
   background-color: var(--color-white);
-  padding-bottom: 32px;
   border-radius: 0px 0px 4px 4px;
   display: block;
   width: calc((100% - 72px) / 4)
@@ -266,7 +279,6 @@ button {
   gap: 24px;
 }
 .team-img {
-  margin-bottom: 32px;
   display: block;
   max-width: 100%;
   height: auto;
@@ -334,6 +346,11 @@ button {
   border: 1px solid var(--color-cornflower);
   border-radius: 4px;
   padding: 12px 24px;
+  max-height: 48px;
+  min-width: 126;
+  flex: none;
+  white-space: nowrap;
+  
 }
 .portfolio-filters-btn:hover,
 .portfolio-filters-btn:focus {
@@ -345,32 +362,29 @@ button {
 
 .portfolio-filters-list {
   display: flex;
-  padding-top: 96px;
-  padding-bottom: 72px;
   width: 586px;
   gap: 24px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  margin-bottom: 72px
-}
+  }
 
 .portfolio-projects-list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--indent);
-  row-gap: 48px; 
+  row-gap: 48px;
+  padding-top: 72px; 
 
 }
 
 .portfolio-projects-item {
-  flex-basis: calc ((100% - var(--indent) * (var(--items-1))) / var(--items));
-  border: 1px solid var(--color-cornflower);
+  flex-basis: calc ((100% - var(--indent) * var(--items-1)) / var(--items));
   width: 360px;
 }
 .portfolio-prosect-container {
   padding: 32px 16px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--color-cornflower);
   border-top: none;
 }
 
