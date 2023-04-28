@@ -362,7 +362,6 @@ button {
 
 .portfolio-filters-list {
   display: flex;
-  width: 586px;
   gap: 24px;
   margin-left: auto;
   margin-right: auto;
@@ -374,7 +373,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: var(--indent);
-  row-gap: 48px;
+  row-gap: 48px; 
  }
 
 .portfolio-projects-item {
